@@ -17,9 +17,12 @@ class Blinker:
         return self.activated
 
     def change(self):
-        #TODO
-        pass
-
+        # self.activated = not self.activated
+        if self.activated:  # if self.activated==True, pero al ser booleano lo capta 
+            self.deactivate()
+        else:  # if self.activated==False:
+            self.activate()
+            
     def __str__(self):
         if self.activated:
             status = 'A'
