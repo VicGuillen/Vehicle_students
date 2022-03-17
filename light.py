@@ -1,5 +1,5 @@
-class Light(Environment):
-    def __init__(self):
+class Light:
+    def __init__(self,environment):
         self.activate()
     
     def activate(self):
