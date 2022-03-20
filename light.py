@@ -1,6 +1,7 @@
 class Light:
     def __init__(self,environment):
         self.activate()
+        self.environment = environment
     
     def activate(self):
         self.activated=True
@@ -17,6 +18,13 @@ class Light:
 
     
     def __str__(self):
-        lum = self.get_lum()
-        status = "Nivel de luminosidad: " + str(lum)
+
+        status = "Luces: " 
+        if self.activated:
+            status += ' Activadas'
+        else:
+            status += ' Desactivadas'
+        return status
+        
+        
         return status
