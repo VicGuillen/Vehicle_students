@@ -17,9 +17,11 @@ class Vehicle:
 
 
     def __str__(self):
-        status = str(self.blinker_front) + ' ' + str(self.blinker_rear)
-        status += "\n"
-        status += str(self.engine.rpm) + ' ' + str(self.engine.gear) + ' ' + str(self.engine.get_speed) + ' ' + str(self.fuel) 
+        status = str(self.blinker_front) + ' ' + str(self.blinker_rear) + "\n"
+        status += str(self.engine.rpm) + ' ' + str(self.engine.gear) + ' ' + str(self.engine.get_speed()) + "\n"
+        status += str(self.fuel) + "\n"
+        status += str(self.environment) + "\n"
+        status += str(self.light)
         return status
 
 
